@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+
+.nav-bar {
+    display: flex;
+    border-bottom: 5px solid rgb(218, 25, 61);
+}
+
+.logo-container {
+    padding-left: 30px;
+}
+
+.logo {
+    width: 240px;
+}
+
+.nav-logo {
+    flex: 2;
+}
+
+.nav-items{
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: 400;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-shadow: -1px 1px 1px rgb(152, 148, 148);
+}
+
+.nav-right {
+    flex: 1;
+}
+
+.main-container {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.main-text {
+    flex: 1;
+    margin: auto;
+}
+
+.main-text > h1 {
+    font-size: 60px;
+    font-family: roboto;
+    color: rgb(218, 25, 61);
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    text-shadow: -4px 4px 5px gray;
+}
+
+.main-text > h2 {
+    font-size: 40px;
+    font-family: roboto;
+    color: rgb(33, 42, 61);
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.main-text > h3 {
+    background-color: black;
+    font-size: 20px;
+    font-family: Arial;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    width: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+}
+
+.main-text > p {
+    width: 90%;
+    font-size: 20px;
+    font-family: roboto-slab;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.main-image {
+    flex: 1;
+}
+
+.main-image > img {
+    width: 100%;
+    border: 5px solid rgb(209, 201, 201);
+    border-radius: 10px;
+}
+
+.about {
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.about-section {
+    display: block;
+    border: 2px solid rgb(218, 25, 61);
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.about-section > .title {
+    width: 300px;
+    background-color: rgb(218, 25, 61);
+    color: rgb(33, 42, 61);
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    border-radius: 5px;
+}
+
+.about-section > .description {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+    font-family: roboto;
+}
