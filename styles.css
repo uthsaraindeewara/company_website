@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-size: 16px;
 }
 
 .nav-bar {
@@ -26,7 +27,7 @@ body {
 }
 
 .nav-item {
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: roboto;
     font-weight: 400;
     margin: auto;
@@ -57,7 +58,7 @@ a:hover {
 }
 
 .main-text > h1 {
-    font-size: 60px;
+    font-size: 3.75em;
     font-family: roboto;
     color: rgb(218, 25, 61);
     margin-top: 20px;
@@ -66,8 +67,24 @@ a:hover {
     text-shadow: -4px 4px 5px gray;
 }
 
+.main-text > h3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
 .main-text > h2 {
-    font-size: 40px;
+    font-size: 2.5em;
     font-family: roboto;
     color: rgb(33, 42, 61);
     margin-top: 20px;
@@ -76,8 +93,10 @@ a:hover {
 }
 
 .main-text > h3 {
+    position: relative;
+    overflow: hidden;
     background-color: black;
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: Arial;
     color: white;
     margin-top: 10px;
@@ -93,7 +112,7 @@ a:hover {
 
 .main-text > p {
     width: 90%;
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: roboto-slab;
     font-weight: 600;
     margin-top: 40px;
@@ -117,8 +136,8 @@ a:hover {
 
 .about {
     width: 80%;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 8%;
+    margin-left: 8%;
 }
 
 .about-section {
@@ -133,7 +152,7 @@ a:hover {
     width: 300px;
     background-color: rgb(218, 25, 61);
     color: rgb(33, 42, 61);
-    font-size: 24px;
+    font-size: 1.5em;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 8px;
@@ -148,7 +167,7 @@ a:hover {
     margin-left: 40px;
     margin-bottom: 20px;
     margin-right: 40px;
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: roboto;
 }
 
@@ -160,7 +179,7 @@ a:hover {
 
 .contact-title {
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.5em;
     background-color: rgb(33, 42, 61);
     color: white;
     border-radius: 5px;
@@ -171,7 +190,7 @@ a:hover {
 }
 
 .contact-description > p {
-    font-size: 20px;
+    font-size: 1.25em;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -190,7 +209,7 @@ a:hover {
     flex: 1;
     position: relative;
     padding-left: 10px;
-    font-size: 22px;
+    font-size: 1.375em;
     background-color: rgb(218, 25, 61);
 }
 
@@ -210,7 +229,7 @@ a:hover {
 
 .contact-details {
     flex: 3;
-    font-size: 22px;
+    font-size: 1.375em;
     background-color: white;
     padding-top: 6px;
     padding-bottom: 4px;
@@ -219,7 +238,7 @@ a:hover {
 }
 
 .form-description {
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: roboto;
     font-weight: 500;
     margin-top: 40px;
@@ -243,7 +262,7 @@ form {
 }
 
 form > label {
-    font-size: 20px;
+    font-size: 1.25em;
     margin-bottom: 10px;
 }
 
@@ -261,11 +280,11 @@ form > input[type="submit"] {
     margin-right: 10%;
     background-color: rgb(33, 42, 61);
     color: white;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .contact-end {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .contact-end > .top {
@@ -298,7 +317,7 @@ form > input[type="submit"] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .footer-nav > a {
@@ -325,7 +344,7 @@ form > input[type="submit"] {
     top: 4px;
     left: 40px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.25em;
     color: white;
 }
 
@@ -334,13 +353,22 @@ form > input[type="submit"] {
 }
 
 .footer-bottom {
-    font-size: 20px;
+    font-size: 1.25em;
     color: white;
 }
 
 @media (max-width: 600px) {
+    body {
+        font-size: 2vw;
+    }
+
     .main-container {
         flex-direction: column;
+        margin: 0;
+    }
+
+    .main-text {
+        margin-bottom: 40px;
     }
 
     .main-text > p {
@@ -357,14 +385,22 @@ form > input[type="submit"] {
 
     .main-image > p {
         position: absolute;
-        top: 30%;
+        top: 25%;
         display: inline-block;
         margin-left: 40px;
         margin-right: 40px;
         text-align: center;
-        font-size: 20px;
+        font-size: 2em;
         font-family: roboto-slab;
         font-weight: 600;
         z-index: 1;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .about-section > .title {
+        width: 150px;
     }
 }
